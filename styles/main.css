@@ -746,6 +746,10 @@ body {
   font-size: 14px;
 }
 
+.donate__form-sent {
+  display: none;
+}
+
 @media (max-width: 650px) {
   .donate {
     flex-direction: column;

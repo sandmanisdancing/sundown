@@ -46,11 +46,18 @@ var database = firebase.database();
 
 document.querySelector('#form-donate').addEventListener('submit', function (e) {
   e.preventDefault()
-  
+
   var formData = {
     name: document.querySelector('#input1').value,
     number: document.querySelector('#input2').value,
     email: document.querySelector('#input3').value
   }
-  firebase.database().ref('formData/').push(formData);
+  firebase.database().ref('formData/').push(formData, function (error) {
+    if (error) {
+      console.log('Something went wrong')
+    } else {
+      document.getElementById('form-donate').style.display = 'none'
+      document.querySelector('.donate__form-sent').style.display = 'block'
+    }
+  });
 })
