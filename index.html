@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Forum  charitable birthday</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <script defer src="scripts/jquery.bpopup.min.js"></script>
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="pageheader">
+    <div class="center">
+      <div class="logo">
+        <img src="images/fg.png" alt="Forum group logo">
+      </div>
+
+      <h1 class="pageheader__title">
+        Forum charitable&nbsp;birthday
+      </h1>
+      <p class="pageheader__description">
+        Нам исполняется 16 лет! В честь такого события мы хотим помочь детям с синдромом Дауна: собрать средства на кафе, в котором они смогут работать, развиваться и дарить свою любовь. Вы можете присоединиться к нам и стать частью нашего солнечного проекта.
+      </p>
+
+      <button class="btn" id="help-btn">Помочь детям</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contributions">
+      <div class="center">
+        <div class="contributions__item">
+          <div class="contributions__item-inner">
+            <h2 class="contributions__title">Взнос<br>арендаторов</h2>
+            <p class="contributions__money"><span>23 000</span>&nbsp;грн</p>
+          </div>
+          <div class="contributions__border" aria-hidden="true"></div>
+        </div>
+        <div class="contributions__item">
+          <div class="contributions__item-inner">
+            <h2 class="contributions__title">Взнос<br>Forum Group</h2>
+            <p class="contributions__money"><span>46 000</span>&nbsp;грн</p>
+          </div>
+          <div class="contributions__border" aria-hidden="true"></div>
+        </div>
+        <div class="contributions__item">
+          <div class="contributions__item-inner">
+            <h2 class="contributions__title">Всего<br>собрано</h2>
+            <p class="contributions__money contributions__money--total"><span>69 000</span>&nbsp;грн</p>
+          </div>
+          <div class="contributions__border contributions__border--red" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="center">
+        <h2 class="sect-header">
+          Всего три шага до цели
+        </h2>
+        <div class="steps__wrapper">
+          <div class="steps__item">
+            <div class="steps__icon">
+              <img src="images/step1.png" alt="">
+            </div>
+            <p class="steps__description">
+              C 16.05 по 15.06 собираем пожертвования
+            </p>
+          </div>
+          <div class="steps__item">
+            <div class="steps__icon">
+              <img src="images/step2.png" alt="">
+            </div>
+            <p class="steps__description">
+              Forum Group удваивает собранную сумму
+            </p>
+          </div>
+          <div class="steps__item">
+            <div class="steps__icon">
+              <img src="images/step3.png" alt="">
+            </div>
+            <p class="steps__description">
+              Передаём средства организаторам проекта
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="center">
+        <div class="about__text">
+          <h2 class="about__header">O нас</h2>
+          <div class="about__description">
+            <p>
+              Forum Management Group — сеть бизнес-центров Киева. Основная деятельность: управление проектами в сфере недвижимости. Также мы реконструируем разрушенные старые здания и на их месте строим деловые центры.
+            </p>
+            <p>
+              FMG создает функциональные, современные и комфортные для работы здания.
+            </p>
+          </div>
+        </div>
+        <div class="about__image">
+          <img src="images/about-pic.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="center">
+        <div class="project__image">
+          <img src="images/project-pic.jpg" alt="">
+        </div>
+        <div class="project__text">
+          <h2 class="project__header">О проекте</h2>
+          <div class="project__description">
+            <p>
+              Программа «Перспектива 21-3» создана для помощи детям с синдромом Дауна. В её рамках уже открыли пекарню в городе Бровары, где работает 10 стажёров.
+            </p>
+            <p>
+              Теперь мы собираем средства на кафе при пекарне, где дети с инвалидностью смогут устроиться на работу. По программе им будут помогать социальные педагоги. А нашу мечту мы осуществим с благотворительным фондом Tulsun Foundation.
+            </p>
+          </div>
+          <a href="#" class="video-btn">Посмотреть видео</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contribution">
+      <div class="center">
+        <h2 class="sect-header">
+          Сделайте свой маленький вклад в большое дело
+        </h2>
+        <div class="contribution__wrapper">
+          <div class="contribution-block">
+            <h3 class="contribution-block__head">
+              <span>Кафе при пекарне</span>
+            </h3>
+            <div class="contribution-block__image">
+              <picture>
+                <source srcset="images/cafe.jpg" media="(min-width: 865px)" type="image/jpeg">
+                <source srcset="images/cafe-mobile.jpg" type="image/jpeg">
+                <img src="images/cafe-mobile.jpg" alt="">
+              </picture>
+            </div>
+            <div class="contribution-block__body">
+              <p class="contribution-block__description">
+                В этом кафе будут работать дети с особенностями. Каждый, кто внес вклад, может прийти на завтрак в пекарне, который для вас с любовью приготовят дети.
+              </p>
+              <div class="contribution-block__btn">
+                <a href="#" class="btn btn--red form-open">Помочь сейчас</a>
+              </div>
+            </div>
+          </div>
+          <div class="contribution-block">
+            <h3 class="contribution-block__head">
+              <span>Развивающая литература</span>
+            </h3>
+            <div class="contribution-block__image">
+              <picture>
+                <source srcset="images/literature.jpg" media="(min-width: 865px)" type="image/jpeg">
+                <source srcset="images/literature-mobile.jpg" type="image/jpeg">
+                <img src="images/literature-mobile.jpg" alt="">
+              </picture>
+            </div>
+            <div class="contribution-block__body">
+              <p class="contribution-block__description">
+                Вы можете поддержать разработку специально обучающих материалов. А все, кто сделал взнос, могут посетить открытый урок по методике проекта.
+              </p>
+              <div class="contribution-block__btn">
+                <a href="#" class="btn form-open">Помочь сейчас</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="heart">
+      <div class="heart__inner">
+        <img src="images/heart.png" alt="">
+        <p>
+          Обратите внимание, что от каждого пожертвование на одного счастливого солнечного ребенка больше и одну выпечку вкуснее.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pagefooter">
+    <div class="center">
+      <div class="pagefooter__block">
+        <div class="pagefooter__block-top"><img src="images/tulsun.png" alt=""></div>
+        <div class="pagefooter__block-bottom">
+          <p>
+            <a class="pagefooter__link" target="_blank" href="https://www.facebook.com/tulsun.foundation/">Facebook</a>
+          </p>
+          <p>
+            <a class="pagefooter__link" href="mailto:tulsun.foundation@gmail.com">tulsun.foundation@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="pagefooter__block">
+        <div class="pagefooter__block-top"><img src="images/fg.png" alt=""></div>
+        <div class="pagefooter__block-bottom">
+          <p>
+            <a class="pagefooter__link" target="_blank" href="https://www.facebook.com/forumgroupukraine/">Facebook</a>
+          </p>
+          <p>
+            <a class="pagefooter__link" href="mailto:marketing@forumgroup.com.ua">
+              marketing@forumgroup.com.ua
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="pagefooter__block">
+        <div class="pagefooter__block-top"><img src="images/perspective.png" alt=""></div>
+        <div class="pagefooter__block-bottom">
+          <p>
+            <a class="pagefooter__link" target="_blank" href="https://www.facebook.com/perspectiva21.3/">Facebook</a>
+          </p>
+        </div>
+      </div>
+      <div class="pagefooter__block">
+        <div class="pagefooter__block-top">Позвоните нам</div>
+        <div class="pagefooter__block-bottom">
+          <p>
+            <a href="tel:+380636459716" class="tel">+380636459716 Анастасия</a>
+          </p>
+          <p>
+            <a href="tel:+380933810062" class="tel">+380933810062 Ольга</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup popup--form" id="popup-form">
+    <button type="button" class="popup__close">Закрыть</button>
+
+    <h2 class="sect-header popup__header">
+      Введите свои данные, чтобы мы могли с вами связаться
+    </h2>
+    <section class="donate">
+      <div class="donate__column">
+        <h3 class="donate__header">
+          Юридическое лицо
+        </h3>
+
+        <div class="donate__form form">
+          <form action="" id="form-donate">
+            <div class="form__line">
+              <label for="input1" class="form__label">Ваше имя</label>
+              <input type="text" class="form__field" placeholder="Виктория" id="input1" required>
+            </div>
+            <div class="form__line">
+              <label for="input2" class="form__label">Номер телефона</label>
+              <input type="tel" class="form__field" placeholder="067 123 34 45" id="input2" required>
+            </div>
+            <div class="form__line">
+              <label for="input3" class="form__label">E-mail</label>
+              <input type="email" class="form__field" id="input3" required>
+            </div>
+            <div class="form__line form__line--submit">
+              <button type="submit" class="btn">Отправить</button>
+            </div>
+            <p class="form__required">
+              Все поля обязательны.
+            </p>
+          </form>
+        </div>
+        <div class="donate__form-sent"></div>
+      </div>
+      <div class="donate__column">
+        <h3 class="donate__header">
+          Физическое лицо
+        </h3>
+
+        <p class="donate__personal">
+          Вы можете лично пожертвовать любую сумму для солнечных детей. Простой перейдите по ссылке и перведите желаемую сумму.
+        </p>
+
+        <a target="_blank" href="#" class="btn">Перейти</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="popup popup--video">
+    <button type="button" class="popup__close">Закрыть</button>
+
+    <h2 class="sect-header popup__header popup__header--la">
+      Особлива пекарня | Hromadske.doc
+    </h2>
+    <iframe src="https://www.youtube.com/embed/nWl7kmE-tlE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
