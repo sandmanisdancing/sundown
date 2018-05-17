@@ -32,32 +32,32 @@ document.getElementById('help-btn').addEventListener('click', function () {
   })
 })
 
-var config = {
-  apiKey: "AIzaSyCKRdvEC1qTw7LYcuYnvGqIgZMguH6vuEc",
-  authDomain: "sundownsyndrome-7dcc8.firebaseapp.com",
-  databaseURL: "https://sundownsyndrome-7dcc8.firebaseio.com",
-  projectId: "sundownsyndrome-7dcc8",
-  storageBucket: "sundownsyndrome-7dcc8.appspot.com",
-  messagingSenderId: "1075856712872"
-};
-firebase.initializeApp(config);
-
-var database = firebase.database();
-
-document.querySelector('#form-donate').addEventListener('submit', function (e) {
-  e.preventDefault()
-
-  var formData = {
-    name: document.querySelector('#input1').value,
-    number: document.querySelector('#input2').value,
-    email: document.querySelector('#input3').value
-  }
-  firebase.database().ref('formData/').push(formData, function (error) {
-    if (error) {
-      console.log('Something went wrong')
-    } else {
-      document.getElementById('form-donate').style.display = 'none'
-      document.querySelector('.donate__form-sent').style.display = 'block'
-    }
-  });
-})
+// var config = {
+//   apiKey: "AIzaSyCKRdvEC1qTw7LYcuYnvGqIgZMguH6vuEc",
+//   authDomain: "sundownsyndrome-7dcc8.firebaseapp.com",
+//   databaseURL: "https://sundownsyndrome-7dcc8.firebaseio.com",
+//   projectId: "sundownsyndrome-7dcc8",
+//   storageBucket: "sundownsyndrome-7dcc8.appspot.com",
+//   messagingSenderId: "1075856712872"
+// };
+// firebase.initializeApp(config);
+//
+// var database = firebase.database();
+//
+// document.querySelector('#form-donate').addEventListener('submit', function (e) {
+//   e.preventDefault()
+//
+//   var formData = {
+//     name: document.querySelector('#input1').value,
+//     number: document.querySelector('#input2').value,
+//     email: document.querySelector('#input3').value
+//   }
+//   firebase.database().ref('formData/').push(formData, function (error) {
+//     if (error) {
+//       console.log('Something went wrong')
+//     } else {
+//       document.getElementById('form-donate').style.display = 'none'
+//       document.querySelector('.donate__form-sent').style.display = 'block'
+//     }
+//   });
+// })

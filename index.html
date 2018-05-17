@@ -6,14 +6,24 @@
   <meta property=og:image content="images/fb-share.jpg">
 
   <title>Forum charitable birthday</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NW39VT8');</script>
+  <!-- End Google Tag Manager →
+
   <link rel="stylesheet" href="styles/main.css">
 
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <!-- <script defer src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script> -->
   <script defer src="scripts/jquery.bpopup.min.js"></script>
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW39VT8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="pageheader">
     <div class="center">
       <div class="logo">
@@ -69,7 +79,7 @@
               <img src="images/step1.png" alt="">
             </div>
             <p class="steps__description">
-              с 18 мая по 1 июня собираем пожертвования
+              с 18 мая по 15 июня собираем пожертвования
             </p>
           </div>
           <div class="steps__item">
@@ -126,7 +136,7 @@
               Теперь мы собираем средства на кафе при пекарне, где дети с инвалидностью смогут устроиться на работу. По программе им будут помогать социальные педагоги. А нашу мечту мы осуществим с благотворительным фондом Tulsun Foundation.
             </p>
           </div>
-          <a href="#" class="video-btn">Посмотреть видео</a>
+          <a href="#" class="video-btn" id="vb">Посмотреть видео</a>
         </div>
       </div>
     </section>
@@ -153,7 +163,7 @@
                 В этом кафе будут работать дети с особенностями. Каждый, кто внес вклад, может прийти на завтрак в пекарне, который для вас с любовью приготовят дети.
               </p>
               <div class="contribution-block__btn">
-                <a href="#" class="btn form-open">Помочь сейчас</a>
+                <a href="#" class="btn form-open" id="help-1">Помочь сейчас</a>
               </div>
             </div>
           </div>
@@ -173,7 +183,7 @@
                 Вы можете поддержать разработку специально обучающих материалов. А все, кто сделал взнос, могут посетить открытый урок по методике проекта.
               </p>
               <div class="contribution-block__btn">
-                <a href="#" class="btn form-open">Помочь сейчас</a>
+                <a href="#" class="btn form-open" id="help-2">Помочь сейчас</a>
               </div>
             </div>
           </div>
@@ -251,7 +261,11 @@
           Юридическое лицо
         </h3>
 
-        <div class="donate__form form">
+        <p class="donate__personal">Пожалуйста, заполните форму и мы свяжемся с вами в ближайшее время.</p>
+
+        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSel_rEpZsT4n6VqbxloEVPhsjsSu-OVZ1M7GTQwfoyCa4Miyw/viewform" class="btn" id="donate-1">Перейти</a>
+
+        <!-- <div class="donate__form form">
           <form action="" id="form-donate">
             <div class="form__line">
               <label for="input1" class="form__label">Ваше имя</label>
@@ -275,7 +289,7 @@
         </div>
         <div class="donate__form-sent">
           <p>Спасибо, мы свяжемся с вами в ближайшее время</p>
-        </div>
+        </div> -->
       </div>
       <div class="donate__column">
         <h3 class="donate__header">
@@ -286,7 +300,7 @@
           Вы можете лично пожертвовать любую сумму для солнечных детей. Просто перейдите по ссылке и переведите желаемую сумму.
         </p>
 
-        <a target="_blank" href="#" class="btn">Перейти</a>
+        <a target="_blank" href="https://www.liqpay.ua/ru/checkout/card/1526566369738663_886544709_ckfToBNJZMeoV4mCnmVT" class="btn" id="donate-2">Перейти</a>
       </div>
     </section>
   </div>

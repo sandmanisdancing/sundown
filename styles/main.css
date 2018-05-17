@@ -851,6 +851,7 @@ body {
   color: #828285;
   font-size: 14px;
   font-weight: 350;
+  min-height: 55px;
 }
 
 .donate__form-sent {
